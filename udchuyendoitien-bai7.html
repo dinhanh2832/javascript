@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td>
+            <p>Amount</p>
+            <input type="number" id="so">
+        </td>
+        <td>
+            <p>From Curency</p>
+            <select name="đòng" id="sl1">
+                <option value="vnd">Vietnam</option>;
+                <option value="đô">USD</option>;
+            </select>
+        </td>
+        <td>
+            <p>To Curency</p>
+            <select name="$" id="sl2">
+                <option value="vnd">Vietnam</option>;
+                <option value="đô">USD</option>
+            </select>
+        </td>
+        <td>
+            <button onclick="abc()">Convert</button>
+        </td>
+    </tr>
+</table>
+<div id="alo"></div>
+<script>
+    function abc() {
+        let gtv = document.getElementById('so').value;
+        let x = document.getElementById('sl1').value;
+        let y = document.getElementById('sl2').value;
+        if (x == 'vnd' && y == 'đô'){
+            document.getElementById('alo').innerHTML = 'Result: ' + gtv*24000;
+        }
+        if (x == y){
+            document.getElementById('alo').innerHTML = gtv;
+        }
+        if (x == 'đô' && y == 'vnd'){
+            document.getElementById('alo').innerHTML= 'Result: ' + gtv/24000;
+        }
+    }
+
+</script>
+
+</body>
+</html>
