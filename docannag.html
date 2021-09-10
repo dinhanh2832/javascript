@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td>
+            <p>Hỡi bro, hãy nhập cân nặng</p>
+            <input type="number" id="cannag">kg</input>
+        </td>
+        <td>
+            <p>Còn dưới này là chiều cao của bro</p>
+            <input type="number" id="chieucao">m</input>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button onclick="chamvao()" >Hãy chạm vào em để biết kết quả</button>
+        </td>
+    </tr>
+</table>
+<p id="ac"></p>
+<script>
+    function chamvao() {
+        let x = +document.getElementById('cannag').value;
+        let y = +document.getElementById('chieucao').value;
+        let BMI = x / (y**2);
+        if (BMI < 18.5) {
+            alert('Hơi gầy nha');
+        } else
+            if (BMI < 25) {
+                alert('Bình thừng nè')
+            } else
+                if (BMI < 30) {
+                    alert('Hơi mập nha');
+                } else {
+                    alert('ỐI DỜI ƠI CON LỢN')
+                }
+
+
+    }
+</script>
+</body>
+</html>
