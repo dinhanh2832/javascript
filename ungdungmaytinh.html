@@ -18,55 +18,42 @@
 <table>
     <tr>
         <td>
-            <button value="+" onclick="chamvao1()">Addition(+)</button>
+            <button type="button" value="+" onclick="chamvao(this.value)" >Addition(+)</button>
         </td>
         <td>
-            <button value="-" onclick="chamvao2()">Subtraction(-)</button>
+            <button type="button" value="-" onclick="chamvao(this.value)" >Subtraction(-)</button>
         </td>
         <td>
-            <button value="X" onclick="chamvao3()">Multiplication(X)</button>
+            <button type="button" value="X" onclick="chamvao(this.value)" >Multiplication(X)</button>
         </td>
         <td>
-            <button value="/" onclick="chamvao4()">Division(/)</button>
+            <button type="button" value="/" onclick="chamvao(this.value)">Division(/)</button>
         </td>
     </tr>
 </table>
 <p id="a"></p>
 <script>
-    function chamvao1() {
+    function chamvao(value) {
         let x = document.getElementById('o1').value;
         let y = document.getElementById('o2').value;
-        let xx = parseInt(x);
-        let yy = parseInt(y)
-        let tong = xx + yy;
-        document.getElementById('a').innerHTML = 'Kết quả: ' + tong;
-    }
-    function chamvao3() {
-        let x = document.getElementById('o1').value;
-        let y = document.getElementById('o2').value;
-        let xx = parseInt(x);
-        let yy = parseInt(y)
-        let tong = xx * yy;
-        document.getElementById('a').innerHTML = 'Kết quả: ' + tong;
-    }
-    function chamvao2() {
-        let x = document.getElementById('o1').value;
-        let y = document.getElementById('o2').value;
-        let xx = parseInt(x);
-        let yy = parseInt(y)
-        let tong = xx - yy;
-        document.getElementById('a').innerHTML = 'Kết quả: ' + tong;
-    }
-    function chamvao4() {
-        let x = document.getElementById('o1').value;
-        let y = document.getElementById('o2').value;
-        let xx = parseInt(x);
-        let yy = parseInt(y)
-        let tong = xx / yy;
-        let tong2 = tong.toFixed(2);
-        document.getElementById('a').innerHTML = 'Kết quả: ' + tong2;
-    }
+        let d = parseInt(x);
+        let e = parseInt(y);
+        if (value == '+' ){
+            let tong = d + e;
+            document.getElementById('a').innerHTML = 'Tổng: ' + tong;
+        }if (value == '-' ){
+            let tong = d - e;
+            document.getElementById('a').innerHTML = 'Tổng: ' + tong;
+        }if (value == 'X' ){
+            let tong = d*e;
+            document.getElementById('a').innerHTML = 'Tổng: ' + tong;
+        }if (value == '/' ){
+            let tong = d / e;
+            let c = tong.toFixed(2)
+            document.getElementById('a').innerHTML = 'Tổng: ' + c;
+        }
 
+    }
 </script>
 </body>
 </html>
