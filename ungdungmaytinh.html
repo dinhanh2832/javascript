@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+  <tr>
+      <td>
+          <input type="number" id="o1">
+      </td>
+      <td>
+          <input type="number" id="o2">
+      </td>
+  </tr>
+</table>
+<table>
+    <tr>
+        <td>
+            <button value="+" onclick="chamvao1()">Addition(+)</button>
+        </td>
+        <td>
+            <button value="-" onclick="chamvao2()">Subtraction(-)</button>
+        </td>
+        <td>
+            <button value="X" onclick="chamvao3()">Multiplication(X)</button>
+        </td>
+        <td>
+            <button value="/" onclick="chamvao4()">Division(/)</button>
+        </td>
+    </tr>
+</table>
+<p id="a"></p>
+<script>
+    function chamvao1() {
+        let x = document.getElementById('o1').value;
+        let y = document.getElementById('o2').value;
+        let xx = parseInt(x);
+        let yy = parseInt(y)
+        let tong = xx + yy;
+        document.getElementById('a').innerHTML = 'Kết quả: ' + tong;
+    }
+    function chamvao3() {
+        let x = document.getElementById('o1').value;
+        let y = document.getElementById('o2').value;
+        let xx = parseInt(x);
+        let yy = parseInt(y)
+        let tong = xx * yy;
+        document.getElementById('a').innerHTML = 'Kết quả: ' + tong;
+    }
+    function chamvao2() {
+        let x = document.getElementById('o1').value;
+        let y = document.getElementById('o2').value;
+        let xx = parseInt(x);
+        let yy = parseInt(y)
+        let tong = xx - yy;
+        document.getElementById('a').innerHTML = 'Kết quả: ' + tong;
+    }
+    function chamvao4() {
+        let x = document.getElementById('o1').value;
+        let y = document.getElementById('o2').value;
+        let xx = parseInt(x);
+        let yy = parseInt(y)
+        let tong = xx / yy;
+        document.getElementById('a').innerHTML = 'Kết quả: ' + tong;
+    }
+
+</script>
+</body>
+</html>
