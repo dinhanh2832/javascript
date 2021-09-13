@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tán gái siêu cấp pro</title>
+</head>
+<body>
+<h1 STYLE=" color: pink; position:absolute; left:220px; top:100px; size: 34px"> Em có iu anh hem ???</h1>
+<input type="button" value=" YES " onclick="chamyes()" style="position:absolute; left:285px; top:180px;"/>
+<input type="button" id="anno" value="  NO  " onmouseover="chamno()" style="position:absolute; left:360px; top:180px;"/>
+<script>
+    function chamyes() {
+        alert('Anh biết anh đẹp zai mà. HIHI')
+    }
+    function chamno() {
+        let x = Math.round(Math.random() * window.innerWidth);
+        let y = Math.round(Math.random() * window.innerHeight);
+        document.getElementById('anno').style.left= x + 'px';
+        document.getElementById('anno').style.top = y + 'px';
+    }
+</script>
+</body>
+</html>
